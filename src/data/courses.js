@@ -1,3 +1,4 @@
+
 export const COURSES = [
   {
     id: 'kompyuter-intensiv',
@@ -31,8 +32,8 @@ export const COURSES = [
     duration: 'Boshlang\'ich va yuqori daraja',
     frequency: 'Haftada 3 kun',
     price: '250,000',
-    priceUnit:"so'm / oyiga",
-    optionLabel: 'Ingliz Tili',
+    priceUnit: "so'm / oyiga",
+    optionLabel: 'Ingliz Tili (250,000 so\'m/oy)',
     featured: false,
   },
   {
@@ -43,11 +44,108 @@ export const COURSES = [
     duration: 'HTML, CSS, JavaScript asoslari',
     frequency: 'Haftada 3 kun',
     price: '400,000',
-    priceUnit:"so'm / oyiga",
-    optionLabel: 'Frontend Dasturlash',
+    priceUnit: "so'm / oyiga",
+    optionLabel: 'Frontend Dasturlash (400,000 so\'m/oy)',
     featured: true,
   },
-]
+  {
+    id: 'python',
+    name: 'Python Dasturlash',
+    title: 'Python Dasturlash',
+    tag: 'Backend va Mantiq',
+    duration: 'Python, Algoritmlar va OOP',
+    frequency: 'Haftada 3 kun',
+    price: '400,000',
+    priceUnit: "so'm / oyiga",
+    optionLabel: 'Python Dasturlash (400,000 so\'m/oy)',
+    featured: true,
+  },
+  {
+    id: 'matematika',
+    name: 'Matematika',
+    title: 'Matematika',
+    tag: 'Abituriyent va Maktab',
+    duration: 'Mantiqiy fikrlash va masalalar',
+    frequency: 'Haftada 3 kun',
+    price: '250,000',
+    priceUnit: "so'm / oyiga",
+    optionLabel: 'Matematika (250,000 so\'m/oy)',
+    featured: false,
+  },
+  {
+    id: 'turk-tili',
+    name: 'Turk Tili',
+    title: 'Turk Tili',
+    tag: 'So\'zlashuv va Grammatika',
+    duration: 'Nol va erkin so\'zlashuv darajasi',
+    frequency: 'Haftada 3 kun',
+    price: '250,000',
+    priceUnit: "so'm / oyiga",
+    optionLabel: 'Turk Tili (250,000 so\'m/oy)',
+    featured: false,
+  },
+];
+
+
+
+
+
+
+
+
+
+
+
+// export const COURSES = [
+//   {
+//     id: 'kompyuter-intensiv',
+//     name: 'Kompyuter Savodxonligi (Intensiv)',
+//     title: 'Kompyuter Savodxonligi',
+//     tag: 'Intensiv',
+//     duration: '2 oy davomiyligida',
+//     frequency: 'Har kuni dars',
+//     price: '700,000',
+//     priceUnit: "so'm / oyiga",
+//     optionLabel: "Kompyuter Savodxonligi — Intensiv (700,000 so'm/oy)",
+//     featured: false,
+//   },
+//   {
+//     id: 'kompyuter-standart',
+//     name: 'Kompyuter Savodxonligi (Standart)',
+//     title: 'Kompyuter Savodxonligi',
+//     tag: 'Standart',
+//     duration: '3 oy davomiyligida',
+//     frequency: 'Haftada 3 kun',
+//     price: '350,000',
+//     priceUnit: "so'm / oyiga",
+//     optionLabel: "Kompyuter Savodxonligi — Standart (350,000 so'm/oy)",
+//     featured: false,
+//   },
+//   {
+//     id: 'ingliz-tili',
+//     name: 'Ingliz Tili',
+//     title: 'Ingliz Tili',
+//     tag: 'Barcha darajalar',
+//     duration: 'Boshlang\'ich va yuqori daraja',
+//     frequency: 'Haftada 3 kun',
+//     price: '250,000',
+//     priceUnit:"so'm / oyiga",
+//     optionLabel: 'Ingliz Tili',
+//     featured: false,
+//   },
+//   {
+//     id: 'frontend',
+//     name: 'Frontend Dasturlash',
+//     title: 'Frontend Dasturlash',
+//     tag: 'Zamonaviy Web-dasturlash',
+//     duration: 'HTML, CSS, JavaScript asoslari',
+//     frequency: 'Haftada 3 kun',
+//     price: '400,000',
+//     priceUnit:"so'm / oyiga",
+//     optionLabel: 'Frontend Dasturlash',
+//     featured: true,
+//   },
+// ]
 
 export const SHIFTS = [
   { id: 'smena-1', label: '1-smena', time: '08:00–10:00', value: '1-smena (08:00–10:00)' },
