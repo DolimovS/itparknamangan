@@ -23,7 +23,7 @@ function CourseCard({ course, onSelect }) {
   return (
     <div
       ref={revealRef}
-      className={`reveal group flex flex-col justify-between w-full h-full bg-white rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-cardHover relative ${
+      className={`reveal group flex flex-col justify-between bg-white rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-cardHover relative ${
         course.featured
           ? "border-2 border-primary/70"
           : "border border-line hover:border-primary/30"
@@ -64,7 +64,7 @@ function CourseCard({ course, onSelect }) {
         </li>
       </ul>
 
-      <div className="w-full mt-auto pt-5 border-t border-line">
+      <div className="mt-6 pt-5 border-t border-line">
         <p className="font-display font-extrabold text-ink text-xl">
           {course.price ? (
             <>
@@ -131,8 +131,12 @@ export default function Courses({ onSelectCourse }) {
           {COURSES.map((course, index) => (
             <div
               key={course.id}
-              className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${
-                index >= 3 && !isExpanded ? "hidden md:flex" : "flex"
+              className={`transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] overflow-hidden md:overflow-visible ${
+                index >= 3
+                  ? isExpanded
+                    ? "max-h-[2000px] opacity-100"
+                    : "max-h-0 opacity-0"
+                  : "max-h-[2000px] opacity-100"
               }`}
             >
               <CourseCard course={course} onSelect={handleSelect} />
