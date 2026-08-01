@@ -58,7 +58,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-x-8 gap-y-3 mt-10 pt-8 border-t border-line/80 text-sm text-muted">
             <div>
-              <span className="text-ink font-display font-bold text-base">4</span> ta yo'nalish
+              <span className="text-ink font-display font-bold text-base">7</span> ta yo'nalish
             </div>
             <div>
               <span className="text-ink font-display font-bold text-base">4</span> qulay smena
