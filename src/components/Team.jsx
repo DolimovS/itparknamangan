@@ -9,6 +9,8 @@ import {
   Cpu,
   Terminal,
 } from "lucide-react";
+
+const BASE_URL = import.meta.env.BASE_URL;
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -52,7 +54,7 @@ const teamMembers = [
     description:
       "Til o'quvlarini interaktiv metodlar bilan yetkazadi va muloqotni osonlashtiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
-    image:"public/abdulaziz.jpg",
+    image: `${BASE_URL}abdulaziz.jpg`,
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "A",
@@ -97,8 +99,7 @@ const teamMembers = [
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "B",
-    image:
-      "public/Bahodir.jpg",
+    image: `${BASE_URL}bahodir.jpg`,
     badgeGroup: "lead",
     vip: true,
   },
@@ -123,12 +124,12 @@ const teamMembers = [
     description:
       "Markazning kundalik ishlari va o'quvchilar bilan aloqalarni muvofiqlashtiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
-      image:"public/sadoqat.jpg", 
+    image: `${BASE_URL}sadoqat.jpg`,
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "Z",
     badgeGroup: "admin",
-  }
+  },
 ];
 
 const badgeConfigs = {
@@ -143,18 +144,27 @@ const badgeConfigs = {
   ],
   language: [
     { icon: Globe, color: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
-    { icon: BookOpen, color: "bg-primary/10 text-primary-dark dark:text-primary" },
+    {
+      icon: BookOpen,
+      color: "bg-primary/10 text-primary-dark dark:text-primary",
+    },
   ],
   lead: [
     { label: "VIP", color: "bg-spark/15 text-amber-700 dark:text-spark" },
-    { icon: Terminal, color: "bg-primary/10 text-primary-dark dark:text-primary" },
+    {
+      icon: Terminal,
+      color: "bg-primary/10 text-primary-dark dark:text-primary",
+    },
   ],
   frontend: [
     { icon: BookOpen, color: "bg-sky-500/15 text-sky-700 dark:text-sky-300" },
     { icon: Code2, color: "bg-primary/15 text-primary-dark dark:text-primary" },
   ],
   admin: [
-    { icon: FileText, color: "bg-ink/10 dark:bg-white/10 text-ink dark:text-white" },
+    {
+      icon: FileText,
+      color: "bg-ink/10 dark:bg-white/10 text-ink dark:text-white",
+    },
     { icon: Globe, color: "bg-primary/10 text-primary-dark dark:text-primary" },
   ],
 };

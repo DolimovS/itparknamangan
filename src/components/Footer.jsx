@@ -1,6 +1,8 @@
 import { Phone, MapPin, Send, Instagram } from "lucide-react";
 import { CONTACT } from "../data/config";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function Footer() {
   return (
     <footer

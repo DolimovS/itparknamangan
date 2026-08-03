@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowRight } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const LINKS = [
   { href: "#kurslar", label: "Kurslar" },
   { href: "#jadval", label: "Dars vaqtlari" },
@@ -39,8 +41,8 @@ export default function Navbar() {
         >
           <a href="#top" className="flex items-center gap-2.5">
             <img
-              src="/logo.png"
-              srcSet="/logo.png 1x, /logo@2x.png 2x"
+              src={`${BASE_URL}logo.png`}
+              srcSet={`${BASE_URL}logo.png 1x, ${BASE_URL}logo@2x.png 2x`}
               alt="IT SCHOOL MINGBULOQ"
               className="h-9 w-auto md:h-10"
             />
