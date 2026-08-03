@@ -52,7 +52,7 @@ const teamMembers = [
     description:
       "Til o'quvlarini interaktiv metodlar bilan yetkazadi va muloqotni osonlashtiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
-    image:"../../public/abdulaziz.jpg",
+    image:"public/abdulaziz.jpg",
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "A",
@@ -98,7 +98,7 @@ const teamMembers = [
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "B",
     image:
-      "../../public/Bahodir.jpg",
+      "public/Bahodir.jpg",
     badgeGroup: "lead",
     vip: true,
   },
@@ -123,7 +123,7 @@ const teamMembers = [
     description:
       "Markazning kundalik ishlari va o'quvchilar bilan aloqalarni muvofiqlashtiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
-      image:"../../public/sadoqat.jpg", 
+      image:"public/sadoqat.jpg", 
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "Z",
