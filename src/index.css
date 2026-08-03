@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  transition:
+    background-color 260ms ease,
+    color 260ms ease;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: "Sora", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============ Design system tokens ============ */
+:root {
+  color-scheme: light;
+  --bg: #f6fbf8;
+  --bg-alt: #eff6f2;
+  --surface: #ffffff;
+  --surface-soft: rgba(11, 31, 23, 0.03);
+  --text: #0b1f17;
+  --text-muted: #5c6b64;
+  --line: #e3e9e6;
+  --primary: #0ea672;
+  --primary-dark: #0b7d57;
+  --accent: #22d3ee;
+  --spark: #ffc94d;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #071411;
+  --bg-alt: #0c1f1a;
+  --surface: #102621;
+  --surface-soft: rgba(255, 255, 255, 0.04);
+  --text: #e7f5ef;
+  --text-muted: #93a9a0;
+  --line: rgba(255, 255, 255, 0.08);
+  --primary: #3ddba6;
+  --primary-dark: #0ea672;
+  --accent: #22d3ee;
+  --spark: #ffc94d;
+}
+
+::selection {
+  background: rgba(14, 166, 114, 0.22);
+  color: var(--text);
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* ============ Surfaces ============ */
+.surface {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.section-alt {
+  background-color: var(--bg-alt);
+}
+
+/* ============ Cards ============ */
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(14, 166, 114, 0.35);
+}
+
+/* ============ Buttons ============ */
+.btn-primary {
+  background-image: linear-gradient(135deg, #0ea672, #22d3ee);
+  color: #04140f;
+  font-weight: 600;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    filter 220ms ease;
+  box-shadow: 0 12px 30px -10px rgba(14, 166, 114, 0.55);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 36px -8px rgba(14, 166, 114, 0.65);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--text);
+  transition:
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary);
+}
+
+/* ============ Inputs ============ */
+.field {
+  width: 100%;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 0.85rem;
+  padding: 0.9rem 1.1rem;
+  font-size: 15px;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease;
+}
+
+.field::placeholder {
+  color: var(--text-muted);
+  opacity: 0.75;
+}
+
+.field:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(14, 166, 114, 0.14);
+  background-color: var(--surface);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.4rem;
+}
+
+/* ============ Text helpers ============ */
+.text-body-muted {
+  color: var(--text-muted);
+}
+
+.gradient-text {
+  background-image: linear-gradient(135deg, #0ea672, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+}
+
+/* ============ Signature: circuit growth-path ============ */
+.circuit-path {
+  stroke: url(#growthLineGradient);
+  stroke-dasharray: 7 7;
+  animation: dashMove 2.6s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+/* ============ Mesh background orbs ============ */
+.mesh-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+/* ============ Reveal-on-scroll ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ Swiper theming ============ */
+.swiper-custom {
+  padding-bottom: 5rem;
+  overflow: visible;
+}
+
+.swiper-custom .swiper-pagination {
+  bottom: 1.15rem !important;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  padding-inline: 1rem;
+}
+
+.swiper-custom .swiper-pagination-bullet {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 9999px;
+  background: rgba(14, 166, 114, 0.24);
+  opacity: 0.8;
+  transition:
+    width 0.35s ease,
+    background-color 0.35s ease,
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.swiper-custom .swiper-pagination-bullet-active {
+  width: 2rem;
+  height: 0.85rem;
+  border-radius: 9999px;
+  background-image: linear-gradient(135deg, #0ea672, #22d3ee);
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.swiper-custom .swiper-button-prev,
+.swiper-custom .swiper-button-next {
+  color: var(--primary-dark);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 22px 45px rgba(14, 166, 114, 0.14);
+  top: 50%;
+  transform: translateY(-50%);
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
+  z-index: 20;
+}
+
+.dark .swiper-custom .swiper-button-prev,
+.dark .swiper-custom .swiper-button-next {
+  color: var(--primary);
+}
+
+.swiper-custom .swiper-button-prev {
+  left: -1rem;
+}
+
+.swiper-custom .swiper-button-next {
+  right: -1rem;
+}
+
+.swiper-custom .swiper-button-prev:hover,
+.swiper-custom .swiper-button-next:hover {
+  border-color: var(--primary);
+  transform: translateY(-50%) scale(1.04);
+}
+
+.swiper-custom .swiper-button-prev::after,
+.swiper-custom .swiper-button-next::after {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.swiper-custom .swiper-wrapper {
+  touch-action: pan-y;
+  box-sizing: content-box;
+}
+
+.swiper-custom .swiper-slide {
+  box-sizing: border-box;
+  height: auto;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
