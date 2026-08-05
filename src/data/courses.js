@@ -5,7 +5,7 @@ export const COURSES = [
     name: 'Kompyuter Savodxonligi (Intensiv)',
     title: 'Kompyuter Savodxonligi',
     tag: 'Intensiv',
-    duration: '2 oy davomiyligida',
+    duration: '1.5 oy davomiyligida',
     frequency: 'Har kuni dars',
     price: '700,000',
     priceUnit: "so'm / oyiga",

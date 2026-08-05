@@ -154,6 +154,12 @@ h3,
     background-color 200ms ease;
 }
 
+.field,
+.field option {
+  color: var(--text);
+  background-color: var(--bg-alt);
+}
+
 .field::placeholder {
   color: var(--text-muted);
   opacity: 0.75;
@@ -234,7 +240,7 @@ h3,
 }
 
 .swiper-custom .swiper-pagination {
-  bottom: 1.15rem !important;
+  bottom: 0.75rem !important;
   left: 0;
   width: 100%;
   display: flex;
@@ -290,11 +296,11 @@ h3,
 }
 
 .swiper-custom .swiper-button-prev {
-  left: -1rem;
+  left: 0.75rem;
 }
 
 .swiper-custom .swiper-button-next {
-  right: -1rem;
+  right: 0.75rem;
 }
 
 .swiper-custom .swiper-button-prev:hover,
@@ -305,8 +311,9 @@ h3,
 
 .swiper-custom .swiper-button-prev::after,
 .swiper-custom .swiper-button-next::after {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
+  line-height: 3rem;
 }
 
 .swiper-custom .swiper-wrapper {

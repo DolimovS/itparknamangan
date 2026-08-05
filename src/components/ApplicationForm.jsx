@@ -53,7 +53,7 @@ export default function ApplicationForm({ selectedCourse, onCourseChange }) {
     setForm((f) => ({ ...f, course: val }));
     // If selected course is an Intensiv, set daily days
     if (val && val.toLowerCase().includes("intensiv")) {
-      setForm((f) => ({ ...f, days: "Dushanba – Juma (Har kuni)" }));
+      setForm((f) => ({ ...f, days: "Dushanba – Shanba (Har kuni)" }));
     } else {
       setForm((f) => ({
         ...f,

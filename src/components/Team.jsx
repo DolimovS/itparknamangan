@@ -29,8 +29,7 @@ const teamMembers = [
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "S",
-    image:
-      "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80",
+    image: `${BASE_URL}samandar.jpg`,
     badgeGroup: "office",
   },
   {
@@ -41,6 +40,7 @@ const teamMembers = [
     description:
       "Amaliy mashg'ulotlar va loyiha asosida kompyuter ko'nikmalarini rivojlantiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
+    image: `${BASE_URL}muqaddam.jpg`,
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "M",
@@ -71,8 +71,6 @@ const teamMembers = [
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "T",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
     badgeGroup: "python",
   },
   {
@@ -111,13 +109,14 @@ const teamMembers = [
     description:
       "Markazning kundalik ishlari va o'quvchilar bilan aloqalarni muvofiqlashtiradi.",
     telegram: "https://t.me/ITSCHOOL_MINGBULOQ",
+    image: `${BASE_URL}ziyoda.jpg`,
     instagram:
       "https://www.instagram.com/it_park_mingbuloq?igsh=b3Q5MW5qN2NxODJ6",
     initials: "Z",
     badgeGroup: "admin",
   },
   {
-    id: 7,
+    id: 8,
     name: "Sadoqat",
     role: "Administrator",
     speciality: "Ma'muriyat va O'quvchilarga xizmat",
@@ -195,7 +194,7 @@ function renderBadge(item, index) {
 function TeamCard({ member }) {
   return (
     <article
-      className={`card group relative overflow-hidden p-6 ${
+      className={`card group relative overflow-hidden w-full border-red-600 p-6 ${
         member.vip ? "!border-2 !border-spark/50" : ""
       }`}
     >
@@ -279,7 +278,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="overflow-hidden w-full">
+        <div className="overflow-visible w-full">
           <Swiper
             modules={[Autoplay, Navigation, Pagination]}
             spaceBetween={28}

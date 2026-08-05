@@ -6,12 +6,12 @@ export default function Toast() {
 
   return (
     <div
-      className={`fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] w-[92%] max-w-sm transition-all duration-450 ${
+      className={`fixed inset-x-0 bottom-6 z-[100] mx-auto max-w-sm px-4 transition-all duration-450 ${
         toast ? 'translate-y-0 opacity-100' : 'translate-y-[140%] opacity-0 pointer-events-none'
       }`}
     >
       {toast && (
-        <div className="flex items-start gap-3 bg-void text-white rounded-2xl shadow-2xl ring-1 ring-white/10 px-5 py-4">
+        <div className="w-full flex items-start gap-3 bg-void text-white rounded-2xl shadow-2xl ring-1 ring-white/10 px-5 py-4">
           <span
             className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
               toast.variant === 'error' ? 'bg-red-500' : 'bg-primary text-void'

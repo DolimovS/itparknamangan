@@ -75,13 +75,15 @@ export default function Footer() {
             <h4 className="font-display font-semibold text-sm tracking-wide text-white/50 uppercase">
               Joylashuv
             </h4>
-            <div className="mt-4 rounded-2xl overflow-hidden border border-white/10 aspect-[4/3] bg-white/5 flex items-center justify-center">
-              {/* Google Maps / Yandex Maps iframe shu yerga joylashtiriladi, masalan:
-                  <iframe src="https://www.google.com/maps/embed?..." className="w-full h-full" loading="lazy" /> */}
-              <div className="text-center text-white/70 text-sm px-6">
-                <MapPin size={26} className="mx-auto mb-2 text-accent" />
-                Google Maps / Yandex Maps xaritasi shu joyga o'rnatiladi
-              </div>
+            <div className="mt-4 rounded-2xl overflow-hidden border border-white/10 aspect-[4/3] bg-white/5">
+              <iframe
+                className="w-full h-full"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2868.1424510510246!2d71.45964099999999!3d40.862151000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sru!2s!4v1785949911183!5m2!1sru!2s"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
             </div>
           </div>
         </div>
